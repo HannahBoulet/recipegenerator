@@ -7,29 +7,105 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Gender moment</h2>
-    <label> <input type="checkbox" id="myCheckbox">
-     My Checkbox
+    <h2>Virtual Kitchen</h2>
+    <h4>By: Caleb LeFevre, Hannah __, <br>John __, Damien __</h4>
+
+    <h3>Cookware</h3>
+    <label>
+        <input type="checkbox" id="ovenCheckbox"> Oven
+        <input type="checkbox" id="panCheckbox"> Frying Pan
+        <input type="checkbox" id="potCheckbox"> Pot
+        <br>
+        <input type="checkbox" id="microwaveCheckbox"> Microwave
+        <input type="checkbox" id="airfryerCheckbox"> Airfryer
+        <input type="checkbox" id="blenderCheckbox"> Blender
     </label>
-    <label> <input type="click" id="myButton">
-        My button
-       </label>
+
+    <h3>Dietary Restrictions</h3>
+    <label>
+        <input type="checkbox" id="vegetarianCheckbox"> Vegetarian
+        <input type="checkbox" id="veganCheckbox"> Vegan
+        <input type="checkbox" id="dairyFreeCheckbox"> Dairy-free
+        <br>
+        <input type="checkbox" id="glutenFreeCheckbox"> Gluten-free
+        <input type="checkbox" id="nutFreeCheckbox"> Nut-free
+        <input type="checkbox" id="kosherCheckbox"> Halal/Kosher
+    </label>
+
+    <h3>Dairy</h3>
+    <label> 
+        <input type="checkbox" id="milkCheckbox"> Milk 
+        <input type="checkbox" id="hnhCheckbox"> Half and Half
+        <br>
+        <input type="checkbox" id="heavyCreamCheckbox"> Heavy Whipping Cream
+    </label>
+
+    <h3>Cheese</h3>
+    <label>
+        <input type="checkbox" id="proveloneCheckbox"> Provelone</label>
+        <input type="checkbox" id="swissCheckbox"> Swiss</label>
+        <input type="checkbox" id="parmesianCheckbox"> Parmesian</label>
+        <br>
+        <input type="checkbox" id="cheddarCheckbox"> Cheddar</label>
+        <input type="checkbox" id="mozerellaCheckbox"> Mozerella</label>
+    </label>
+
+    <h3>Grain</h3>
+    <label>
+        <input type="checkbox" id="riceCheckbox"> Rice
+        <input type="checkbox" id="flourCheckbox"> Flour
+        <input type="checkbox" id="breadCrumbsCheckbox"> Bread Crumbs
+        <br>
+        <input type="checkbox" id="oatsCheckbox"> Oats
+        <input type="checkbox" id="pastaCheckbox"> Pasta
+        <input type="checkbox" id="breadCheckbox"> Bread
+        <br>
+        <input type="checkbox" id="breadCheckbox"> Tortillas
+    </label>
+
+    <h3>Vegetables</h3>
+    <label>
+        <input type="checkbox" id="onionCheckbox"> Onion
+        <input type="checkbox" id="bellPepperCheckbox"> Bell Peppers
+        <input type="checkbox" id="potatoCheckbox"> Potatoes
+        <br>
+        <input type="checkbox" id="asperagusCheckbox"> Asperagus
+        <input type="checkbox" id="stringbeansCheckbox"> String Beans
+        <input type="checkbox" id="broccoliCheckbox"> Broccoli
+        <br>
+        <input type="checkbox" id="springOnionCheckbox"> Spring Onion
+        <input type="checkbox" id="calliflourCheckbox"> Calliflour
+
+    </label>
+
+    <h3>Fruit</h3>
+    <label>
+        <input type="checkbox" id="appleCheckbox"> Apple
+        <input type="checkbox" id="blueCheckbox"> Blueberries
+        <input type="checkbox" id="peachesCheckbox"> Peaches
+        <br>
+        <input type="checkbox" id="milkCheckbox"> Raspberries
+        <input type="checkbox" id="milkCheckbox"> Blackberries
+        <input type="checkbox" id="milkCheckbox"> Bannanas
+        <br>
+        <input type="checkbox" id="milkCheckbox"> Strawberries
+    </label>
+
+
+    <br>
+    <br>
+    <label> <input type="click" id="myButton"> <br>Click box to submit </label>
+    <br>
+    <h5>This website is not responsible for being incorrect about dietary restrictions.</h5>
     
     <script>
-        //for(var i = 0; i <= 72; i++)
-        //{
-        //    document.write("false, ")
-        //}
-        var p = []
-        //var protein = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
+            var p = []
             var boolean = false
             var test = ["true"]
-            var checkbox = document.getElementById("myCheckbox")
-            var button = document.getElementById("myButton")
-
-            checkbox.addEventListener("change", function()
-            {
             
+            var milkCheckbox = document.getElementById("milkCheckbox")
+            milkCheckbox.addEventListener("change", function()
+            {
                 boolean = this.checked;
                 console.log("Checkbox checked: " + boolean)
                 if(boolean)
@@ -37,6 +113,8 @@
                 p.push("true")
                 }
             });
+
+            var button = document.getElementById("myButton")
             button.addEventListener("click", function()
             {
                 var bool = true;
@@ -48,10 +126,7 @@
                  {
                     document.write(p)
                  }
-                 //document.write(p)
             });
-            
-            
             
     </script>
 </body>
