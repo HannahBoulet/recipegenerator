@@ -53,6 +53,8 @@
         <br>
         <input type="checkbox" id="cheddarCheckbox"> Cheddar</label>
         <input type="checkbox" id="mozerellaCheckbox"> Mozerella</label>
+        <input type="checkbox" id="peperjackcheeseCheckbox"> Pepper Jack</label>
+        
     </label>
 
     <h3>Grain</h3>
@@ -71,7 +73,7 @@
     <h3>Vegetables</h3>
     <label>
         <input type="checkbox" id="onionCheckbox"> Onion
-        <input type="checkbox" id="bellPepperCheckbox"> Bell Peppers
+        <input type="checkbox" id="PepperCheckbox"> Peppers
         <input type="checkbox" id="potatoCheckbox"> Potatoes
         <br>
         <input type="checkbox" id="asperagusCheckbox"> Asperagus
@@ -440,6 +442,25 @@
                 }
             });
 
+            var peperjackcheeseCheckbox = document.getElementById("peperjackcheeseCheckbox")
+            peperjackcheeseCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Pepper Jack Cheese")
+                }
+                else
+                {
+                    var index = p.indexOf("Heavy Whipping Cream");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
 
 
             var proveloneCheckbox = document.getElementById("proveloneCheckbox")
@@ -700,18 +721,18 @@
             });
 
 
-            var bellPepperCheckbox = document.getElementById("bellPepperCheckbox")
-            bellPepperCheckbox.addEventListener("change", function()
+            var bellPepperCheckbox = document.getElementById("PepperCheckbox")
+            PepperCheckbox.addEventListener("change", function()
             {
                 boolean = this.checked;
                 console.log("Checkbox checked: " + boolean)
                 if(boolean)
                 {
-                p.push("Bell Peppers")
+                p.push("Peppers")
                 }
                 else
                 {
-                    var index = p.indexOf("Bell Peppers");
+                    var index = p.indexOf("Peppers");
                     if (index !== -1) {
                     array.splice(index, 1);
 }
@@ -1208,17 +1229,17 @@
 
             var Chickendumplings = ["oven", "peanut free", "chicken", "Onions", "Butter", "Heavy Cream", "Flour" ]
             var ChickenParmesanMeatballs = ["Frying Pan", "Halal", "peanut free", "Egg", "Chicken", "Parmesean", "Mozzarella"]
-            var OnePotGarlicParmesanPasta = []
-            var TacoSoup = []
-            var LasagnaSoup = []
-            var StuffedPepperSoup = []
-            var VenisonBourguignon = []
-            var FriedPorkChops = []
-            var PorkTenderloinwithPeaches = []
-            var GarlicButterPorkBiteswithLemonGreenBeans = []
-            var SausageandEggSandwiches = []
-            var BAKEDEGGBOATS = []
-            var EasyUltimateBreakfastFrittata = []
+            var OnePotGarlicParmesanPasta = ["Pot", "peanut free", "Milk", "Parmesan", "Butter"]
+            var TacoSoup = ["Pot", "peanut free", "Beef", "Beans", "Onions", "Peppers"]
+            var LasagnaSoup = ["Pot", "peanut free", "Mozzerlla", "Parmesan", "Pasta"]
+            var StuffedPepperSoup = ["Pot", "peanut free", "beef", "Peppers", "Onion", "Pepper Jack Cheese", "Rice"]
+            var VenisonBourguignon = ["Pot", "Kosher", "peanut free", "Venison", "Pork", "Onion", "Butter", "Flour"]
+            var FriedPorkChops = ["Frying Pan", "Kosher", "peanut free", "Dairy-free", "Pork", "Flour"]
+            var PorkTenderloinwithPeaches = ["Frying Pan", "peanut free", "Dairy-free", "Gluten-free", "Pork", "peaches", "Onion"]
+            var GarlicButterPorkBiteswithLemonGreenBeans = ["Frying Pan", "kosher", "Gluten-free", "Pork", "String Beans"]
+            var SausageandEggSandwiches = ["Frying Pan", "Kosher", "Gluten-free", "Pork", "Egg", "Onion", "Peppers", "Chedder"]
+            var BAKEDEGGBOATS = ["oven", "peanut free", "Gluten-free", "Pork", "Egg", "Heavy Whipping Cream", "Bread"]
+            var EasyUltimateBreakfastFrittata = ["oven", "Frying Pan", "peanut free", "Dairy-free", "Egg", "Pork", "peppers"]
             var HOMEMADEBAKEDBEANSVEGAN = []
             var EasyVegetarianChili = []
             var EasyCandiedAlmonds = []
@@ -1243,44 +1264,44 @@
             var AirFryerGrilledPeaches = []
             var PeachCobbler = []
             var ThreeBerryPie = []
-            var RaspberryandAlmondShortbreadThumbprints = []
-            var FreshRaspberrySauce = []
-            var BlackberryPuffPastryTurnoverRecipe = []
-            var BlackberryMuffins = []
-            var FrozenBananaTreatwithChocolate = []
-            var Strawberrypie = []
-            var SweetStrawberries = []
-            var Strawberryandcoconutbirchermuesli = []
-            var MARINATEDROASTEDONIONS = []
-            var SAUTEEDPEPPERSANDONIONS = []
-            var PanRoastedPeppers = []
-            var StuffedPeppers = []
-            var HasselbackPotatoeswithGarlicandHerbButter = []
-            var GreekChickenFreezerMeal = []
-            var GarlicRoastedPotatoes = []
-            var OvenRoastedAsparagus = []
-            var SautéedAsparagus = []
-            var cheesygarlicroastedasparagus = []
-            var SautéedGreenBeanswithGarlic = []
-            var ButteryGarlicGreenBeans = []
-            var ClassicGreenBeanCasserole = []
-            var CaramelizedBroccoliwithGarlic = []
-            var HealthyMacandCheesewithBroccoli = []
-            var GrilledSpringOnions = []
-            var Teriyakitofuwithcharredspringonions = []
-            var BreadPuddingPie = []
-            var HotMilkCake = []
-            var RANCHCHICKENANDSWISSSLIDERS = []
-            var CherryTomatoMozzarellaSaute = []
-            var CreamyTuscanChicken = []
-            var cheddarroastedtomatoes = []
-            var SeasonedRice = []
-            var GreekPotatoCasserole = []
-            var BestEverMacCheese = []
-            var OatsUpma  = []
-            var SpaghettiCarbonara = []
-            var TortillaChips = []
-            var DessertQuesadilla = []
+            var RaspberryandAlmondShortbreadThumbprints = ["Oven", "Vegetarian", "Kosher", "Halal", "Raspberry", "Butter", "Flour"]
+            var FreshRaspberrySauce = ["Pot", "Vegetarian", "Kosher", "Halal", "Raspberry"]
+            var BlackberryPuffPastryTurnoverRecipe = ["Oven", "Vegetarian", "Kosher", "Halal", "Eggs", "Blackberries", "Heavy Cream", "Milk"]
+            var BlackberryMuffins = ["Oven", "Vegetarian", "Kosher", "Halal", "Blackberries", "Eggs", "Butter", "Milk", "Flour"]
+            var FrozenBananaTreatwithChocolate = ["Vegan", "Kosher", "Halal", "Gluten Free", "Dairy Free", "Banana", "Oats"]
+            var Strawberrypie = ["Oven", "Vegan", "Kosher", "Gluten Free", "Dairy Free", "Strawberries"]
+            var SweetStrawberries = ["Vegan", "Kosher", "Halal", "Gluten Free", "Dairy Free", "Strawberries"]
+            var Strawberryandcoconutbirchermuesli = ["Vegetarian", "Kosher", "Halal", "Gluten Free", "Strawberries", "Oats"]
+            var MARINATEDROASTEDONIONS = ["Frying Pan", "Vegetarian", "Kosher", "Halal", "Onion", "Butter"]
+            var SAUTEEDPEPPERSANDONIONS = ["Frying Pan", "Kosher", "Gltuen Free", "Peanut Free", "Dairy Free", "Vegan", "Pepper", "Onions"]
+            var PanRoastedPeppers = ["Frying Pan", "Kosher", "Gltuen Free", "Peanut Free", "Dairy Free", "Vegan", "Pepper", "Onion"]
+            var StuffedPeppers = ["Oven", "Kosher", "Halal", "Gluten Free", "Beef", "Onion", "Pepper", "Mozzerella", "Rice"]
+            var HasselbackPotatoeswithGarlicandHerbButter = ["Oven", "Kosher", "Halal", "Gluten Free", "Potatoes", "Butter", "Parmesan"]
+            var GreekChickenFreezerMeal = ["Oven", "Kosher", "Halal", "Gluten Free", "Chicken", "Potatoes"]
+            var GarlicRoastedPotatoes = ["Oven",  "Kosher", "Gluten Free", "Peanut Free", "Dairy Free", "Vegan", "Potatoes"]
+            var OvenRoastedAsparagus = ["Oven",  "Kosher", "Gluten Free", "Peanut Free", "Asparagus", "Parmesan"]
+            var SautéedAsparagus = ["Frying Pan",  "Kosher", "Gluten Free", "Peanut Free", "Asparagus", "Butter", "Parmesan"]
+            var cheesygarlicroastedasparagus = ["Frying Pan", "Kosher", "Gluten Free", "Peanut Free", "Asparagus", "Mozzarella"]
+            var SautéedGreenBeanswithGarlic = ["Frying Pan", "Kosher", "Gluten Free", "Peanut Free", "Dairy Free", "Vegan", "Halal", "String Beans"]
+            var ButteryGarlicGreenBeans = ["Frying Pan", "Kosher", "Gluten Free", "Peanut Free", "String Beans", "Butter"]
+            var ClassicGreenBeanCasserole = ["Frying Pan", "Kosher", "Peanut Free", "Vegetarian", "String Beans", "Butter", "Milk", "Flour"]
+            var CaramelizedBroccoliwithGarlic = ["Frying Pan", "Kosher", "Gluten Free", "Peanut Free", "Dairy Free", "Vegan", "Halal", "Brocoli"]
+            var HealthyMacandCheesewithBroccoli = ["Pot", "Kosher", "Peanut Free", "Gluten Free", "Broccoli", "Cheddar", "Mozzarella", "Flour"]
+            var GrilledSpringOnions = ["Frying Pan", "Kosher", "Gluten Free", "Peanut Free", "Dairy Free", "Vegan", "Halal", "Spring Onion", "Tofu", "Rice"]
+            var Teriyakitofuwithcharredspringonions = ["Frying Pan", "Kosher", "Gluten Free", "Peanut Free", "Dairy Free", "Vegan", "Halal", "Tofu", "Spring Onion", "Rice"]
+            var BreadPuddingPie = ["Frying Pan", "Oven", "Kosher", "Gluten Free", "Peanut Free", "Vegetarian", "Eggs", "Milk", "Butter", "Bread"]
+            var HotMilkCake = ["Oven", "Kosher", "Peanut Free", "Vegetarian", "Eggs", "Milk", "Butter", "Flour"]
+            var ChickenProvolone = ["Oven", "Halal", "Peanut Free", "Chicken", "Provolone"]
+            var RANCHCHICKENANDSWISSSLIDERS = ["Oven", "Halal", "Peanut Free", "Chicken", "Onion", "Swiss"]
+            var CherryTomatoMozzarellaSaute = ["Oven", "Halal", "Peanut Free", "Mozzarella",]
+            var CreamyTuscanChicken = ["Oven", "Halal", "Peanut Free", "Chicken", "Onion", "Parmesan", "Heavy Cream"]
+            var cheddarroastedtomatoes = ["Oven", "Kosher", "Gluten Free", "Peanut Free", "Vegetarian", "Cheddar"]
+            var SeasonedRice = ["Oven", "Kosher", "Gluten Free", "Peanut Free", "Vegetarian", "Butter", "Rice"]
+            var GreekPotatoCasserole = ["Oven","Kosher", "Gluten Free", "Peanut Free", "Vegetarian","Potato","Butter","Parmesan", "Bread Crumbs"]
+            var BestEverMacCheese = ["Oven", "Kosher", "Gluten Free", "Peanut Free", "Vegetarian", "Onion", "Butter", "Cheddar", "Milk"]
+            var OatsUpma  = ["Frying Pan", "Kosher", "Gluten Free", "Peanut Free", "Vegetarian"]
+            var SpaghettiCarbonara = ["Pot", "Kosher", "peanut free", "Pork", "Eggs", "Pasta"]
+            var TortillaChips = ["Tortillas"]
 
 
             
