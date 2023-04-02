@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,10 @@
         <br>
         <input type="checkbox" id="glutenFreeCheckbox"> Gluten-free
         <input type="checkbox" id="nutFreeCheckbox"> Nut-free
-        <input type="checkbox" id="kosherCheckbox"> Halal/Kosher
+        <input type="checkbox" id="kosherCheckbox"> Kosher
+        <br>
+        <input type="checkbox" id="halalCheckbox"> Halal
+        
     </label>
 
     <h3>Dairy</h3>
@@ -38,6 +41,7 @@
         <input type="checkbox" id="hnhCheckbox"> Half and Half
         <br>
         <input type="checkbox" id="heavyCreamCheckbox"> Heavy Whipping Cream
+        <input type="checkbox" id="butterCheckbox"> Butter
     </label>
 
     <h3>Cheese</h3>
@@ -60,7 +64,7 @@
         <input type="checkbox" id="pastaCheckbox"> Pasta
         <input type="checkbox" id="breadCheckbox"> Bread
         <br>
-        <input type="checkbox" id="breadCheckbox"> Tortillas
+        <input type="checkbox" id="tortillasCheckbox"> Tortillas
     </label>
 
     <h3>Vegetables</h3>
@@ -84,12 +88,28 @@
         <input type="checkbox" id="blueCheckbox"> Blueberries
         <input type="checkbox" id="peachesCheckbox"> Peaches
         <br>
-        <input type="checkbox" id="milkCheckbox"> Raspberries
-        <input type="checkbox" id="milkCheckbox"> Blackberries
-        <input type="checkbox" id="milkCheckbox"> Bannanas
+        <input type="checkbox" id="raspCheckbox"> Raspberries
+        <input type="checkbox" id="blackCheckbox"> Blackberries
+        <input type="checkbox" id="bannaCheckbox"> Bannanas
         <br>
-        <input type="checkbox" id="milkCheckbox"> Strawberries
+        <input type="checkbox" id="strawCheckbox"> Strawberries
     </label>
+
+    <h3>Protein</h3>
+    <label>
+        <input type="checkbox" id="chickenCheckbox"> Chicken
+        <input type="checkbox" id="venisonCheckbox"> Venison
+        <input type="checkbox" id="beefCheckbox"> Beef
+        <br>
+        <input type="checkbox" id="porkCheckbox"> Pork
+        <input type="checkbox" id="shrimpCheckbox"> Shrimp
+        <input type="checkbox" id="eggCheckbox"> Egg
+        <br>
+        <input type="checkbox" id="beansCheckbox"> Beans
+        <input type="checkbox" id="nutsCheckbox"> Nuts
+        <input type="checkbox" id="salmonCheckbox"> Salmon
+        <br>
+        <input type="checkbox" id="tofuCheckbox"> Tofu
 
 
     <br>
@@ -101,7 +121,7 @@
     <script>
             var p = []
             var boolean = false
-            var test = ["true"]
+            
             
             var milkCheckbox = document.getElementById("milkCheckbox")
             milkCheckbox.addEventListener("change", function()
@@ -110,21 +130,1101 @@
                 console.log("Checkbox checked: " + boolean)
                 if(boolean)
                 {
-                p.push("true")
+                p.push("milk")
+                }
+                else
+                {
+                    var index = p.indexOf(item);
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
                 }
             });
+
+
+            var ovenCheckbox = document.getElementById("ovenCheckbox")
+            ovenCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("oven")
+                }
+                else
+                {
+                    var index = p.indexOf("oven");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var fryingCheckbox = document.getElementById("panCheckbox")
+            fryingCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Frying Pan")
+                }
+                else
+                {
+                    var index = p.indexOf("Frying Pan");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var potCheckbox = document.getElementById("potCheckbox")
+            potCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Pot")
+                }
+                else
+                {
+                    var index = p.indexOf("Pot");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var microwaveCheckbox = document.getElementById("microwaveCheckbox")
+            microwaveCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Microwave")
+                }
+                else
+                {
+                    var index = p.indexOf("Microwave");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            
+
+            var airfryerCheckbox = document.getElementById("airfryerCheckbox")
+            airfryerCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Airfryer")
+                }
+                else
+                {
+                    var index = p.indexOf("Airfryer");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var blenderCheckbox = document.getElementById("blenderCheckbox")
+            blenderCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Blender")
+                }
+                else
+                {
+                    var index = p.indexOf("Blender");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            var vegetarianCheckbox = document.getElementById("vegetarianCheckbox")
+            vegetarianCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Vegetarian")
+                }
+                else
+                {
+                    var index = p.indexOf("Vegetarian");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var veganCheckbox = document.getElementById("veganCheckbox")
+            veganCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Vegan")
+                }
+                else
+                {
+                    var index = p.indexOf("Vegan");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var dairyFreeCheckbox = document.getElementById("dairyFreeCheckbox")
+            dairyFreeCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Dairy-free")
+                }
+                else
+                {
+                    var index = p.indexOf("Dairy-free");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var glutenFreeCheckbox = document.getElementById("glutenFreeCheckbox")
+            glutenFreeCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Gluten-free")
+                }
+                else
+                {
+                    var index = p.indexOf("Gluten-free");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var nutFreeCheckbox = document.getElementById("nutFreeCheckbox")
+            nutFreeCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Nut-free")
+                }
+                else
+                {
+                    var index = p.indexOf("Nut-free");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var kosherCheckbox = document.getElementById("kosherCheckbox")
+            kosherCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Kosher")
+                }
+                else
+                {
+                    var index = p.indexOf("Halal/Kosher");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var halalCheckbox = document.getElementById("halalCheckbox")
+            halalCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Halal")
+                }
+                else
+                {
+                    var index = p.indexOf("Halal");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var hnhCheckbox = document.getElementById("hnhCheckbox")
+            hnhCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Half and Half")
+                }
+                else
+                {
+                    var index = p.indexOf("Half and Half");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var heavyCreamCheckbox = document.getElementById("heavyCreamCheckbox")
+            heavyCreamCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Heavy Whipping Cream")
+                }
+                else
+                {
+                    var index = p.indexOf("Heavy Whipping Cream");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            var proveloneCheckbox = document.getElementById("proveloneCheckbox")
+            proveloneCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Provelone")
+                }
+                else
+                {
+                    var index = p.indexOf("Provelone");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var swissCheckbox = document.getElementById("swissCheckbox")
+            swissCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Swiss")
+                }
+                else
+                {
+                    var index = p.indexOf("Swiss");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var parmesianCheckbox = document.getElementById("parmesianCheckbox")
+            parmesianCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Parmesian")
+                }
+                else
+                {
+                    var index = p.indexOf("Parmesian");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+
+            var cheddarCheckbox = document.getElementById("cheddarCheckbox")
+            cheddarCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Cheddar")
+                }
+                else
+                {
+                    var index = p.indexOf("Cheddar");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var mozerellaCheckbox = document.getElementById("mozerellaCheckbox")
+            mozerellaCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Mozerella")
+                }
+                else
+                {
+                    var index = p.indexOf("Mozerella");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var riceCheckbox = document.getElementById("riceCheckbox")
+            riceCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Rice")
+                }
+                else
+                {
+                    var index = p.indexOf("Rice");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var flourCheckbox = document.getElementById("flourCheckbox")
+            flourCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Flour")
+                }
+                else
+                {
+                    var index = p.indexOf("Flour");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            var breadCrumbsCheckbox = document.getElementById("breadCrumbsCheckbox")
+            breadCrumbsCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Bread Crumbs")
+                }
+                else
+                {
+                    var index = p.indexOf("Bread Crumbs");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var oatsCheckbox = document.getElementById("oatsCheckbox")
+            oatsCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Oats")
+                }
+                else
+                {
+                    var index = p.indexOf("Oats");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            var pastaCheckbox = document.getElementById("pastaCheckbox")
+            pastaCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Pasta")
+                }
+                else
+                {
+                    var index = p.indexOf("Pasta");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var breadCheckbox = document.getElementById("breadCheckbox")
+            breadCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Bread")
+                }
+                else
+                {
+                    var index = p.indexOf("Bread");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            var tortillasCheckbox = document.getElementById("tortillasCheckbox")
+            tortillasCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Tortillas")
+                }
+                else
+                {
+                    var index = p.indexOf("Tortillas");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var onionCheckbox = document.getElementById("onionCheckbox")
+            onionCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Onion")
+                }
+                else
+                {
+                    var index = p.indexOf("Onion");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var bellPepperCheckbox = document.getElementById("bellPepperCheckbox")
+            bellPepperCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Bell Peppers")
+                }
+                else
+                {
+                    var index = p.indexOf("Bell Peppers");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var potatoCheckbox = document.getElementById("potatoCheckbox")
+            potatoCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Potatoes")
+                }
+                else
+                {
+                    var index = p.indexOf("Potatoes");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            var asperagusCheckbox = document.getElementById("asperagusCheckbox")
+            asperagusCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Asperagus")
+                }
+                else
+                {
+                    var index = p.indexOf("Asperagus");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var stringbeansCheckbox = document.getElementById("stringbeansCheckbox")
+            stringbeansCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("String Beans")
+                }
+                else
+                {
+                    var index = p.indexOf("String Beans");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var broccoliCheckbox = document.getElementById("broccoliCheckbox")
+            broccoliCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Broccoli")
+                }
+                else
+                {
+                    var index = p.indexOf("Broccoli");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+            var springOnionCheckbox = document.getElementById("springOnionCheckbox")
+            springOnionCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Spring Onion")
+                }
+                else
+                {
+                    var index = p.indexOf("Spring Onion");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var calliflourCheckbox = document.getElementById("calliflourCheckbox")
+            calliflourCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Calliflour")
+                }
+                else
+                {
+                    var index = p.indexOf("Calliflour");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var appleCheckbox = document.getElementById("appleCheckbox")
+            appleCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Apple")
+                }
+                else
+                {
+                    var index = p.indexOf("Apple");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var blueCheckbox = document.getElementById("blueCheckbox")
+            blueCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Blueberries")
+                }
+                else
+                {
+                    var index = p.indexOf("Blueberries");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var peachesCheckbox = document.getElementById("peachesCheckbox")
+            peachesCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Peaches")
+                }
+                else
+                {
+                    var index = p.indexOf("Peaches");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var raspCheckbox = document.getElementById("raspCheckbox")
+            raspCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Raspberries")
+                }
+                else
+                {
+                    var index = p.indexOf("Raspberries");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var bannaCheckbox = document.getElementById("bannaCheckbox")
+            bannaCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Bannanas")
+                }
+                else
+                {
+                    var index = p.indexOf("Bannanas");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var strawCheckbox = document.getElementById("strawCheckbox")
+            strawCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Strawberries")
+                }
+                else
+                {
+                    var index = p.indexOf("Strawberries");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+
+            var chickenCheckbox = document.getElementById("chickenCheckbox")
+            chickenCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Chicken")
+                }
+                else
+                {
+                    var index = p.indexOf("Chicken");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var venisonCheckbox = document.getElementById("venisonCheckbox")
+            venisonCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Venison")
+                }
+                else
+                {
+                    var index = p.indexOf("Venison");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var beefCheckbox = document.getElementById("beefCheckbox")
+            beefCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Beef")
+                }
+                else
+                {
+                    var index = p.indexOf("Beef");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var porkCheckbox = document.getElementById("porkCheckbox")
+            porkCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Pork")
+                }
+                else
+                {
+                    var index = p.indexOf("Pork");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var shrimpCheckbox = document.getElementById("shrimpCheckbox")
+            shrimpCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Shrimp")
+                }
+                else
+                {
+                    var index = p.indexOf("Shrimp");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var eggCheckbox = document.getElementById("eggCheckbox")
+            eggCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Egg")
+                }
+                else
+                {
+                    var index = p.indexOf("Egg");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var beansCheckbox = document.getElementById("beansCheckbox")
+            beansCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Beans")
+                }
+                else
+                {
+                    var index = p.indexOf("Beans");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var nutsCheckbox = document.getElementById("nutsCheckbox")
+            nutsCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Nuts")
+                }
+                else
+                {
+                    var index = p.indexOf("Nuts");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+            var salmonCheckbox = document.getElementById("salmonCheckbox")
+            salmonCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Salmon")
+                }
+                else
+                {
+                    var index = p.indexOf("Salmon");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var tofuCheckbox = document.getElementById("tofuCheckbox")
+            tofuCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Tofu")
+                }
+                else
+                {
+                    var index = p.indexOf("Tofu");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+            var butterCheckbox = document.getElementById("butterCheckbox")
+            butterCheckbox.addEventListener("change", function()
+            {
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("Butter")
+                }
+                else
+                {
+                    var index = p.indexOf("Butter");
+                    if (index !== -1) {
+                    array.splice(index, 1);
+}
+
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var test = ["oven", "Blueberries"]
+
+
+
 
             var button = document.getElementById("myButton")
             button.addEventListener("click", function()
             {
                 var bool = true;
-                for(var i = 0; i < p.length; i++)
+                for(var i = 0; i < test.length; i++)
                 {
-                bool = bool && test.includes(p[i])
+                bool = bool && p.includes(test[i])
                 }
                  if(bool)
                  {
-                    document.write(p)
+                    document.write(test + "\n")
+                    //document.write (p)
                  }
             });
             
