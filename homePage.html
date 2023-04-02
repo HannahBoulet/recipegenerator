@@ -8,5 +8,52 @@
 </head>
 <body>
     <h2>Gender moment</h2>
+    <label> <input type="checkbox" id="myCheckbox">
+     My Checkbox
+    </label>
+    <label> <input type="click" id="myButton">
+        My button
+       </label>
+    
+    <script>
+        //for(var i = 0; i <= 72; i++)
+        //{
+        //    document.write("false, ")
+        //}
+        var p = []
+        //var protein = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
+            var boolean = false
+            var test = ["true"]
+            var checkbox = document.getElementById("myCheckbox")
+            var button = document.getElementById("myButton")
+
+            checkbox.addEventListener("change", function()
+            {
+            
+                boolean = this.checked;
+                console.log("Checkbox checked: " + boolean)
+                if(boolean)
+                {
+                p.push("true")
+                }
+            });
+            button.addEventListener("click", function()
+            {
+                var bool = true;
+                for(var i = 0; i < p.length; i++)
+                {
+                bool = bool && test.includes(p[i])
+                }
+                 if(bool)
+                 {
+                    document.write(p)
+                 }
+                 //document.write(p)
+            });
+            
+            
+            
+    </script>
 </body>
+
 </html>
