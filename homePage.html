@@ -50,12 +50,12 @@
 
     <h3>Cheese</h3>
     <label>
-        <input type="checkbox" id="proveloneCheckbox"> <label for="proveloneCheckbox">Provelone</label>
+        <input type="checkbox" id="provoloneCheckbox"> <label for="provoloneCheckbox">Provolone</label>
         <input type="checkbox" id="swissCheckbox"> <label for="swissCheckbox">Swiss</label>
-        <input type="checkbox" id="parmesianCheckbox"> <label for="parmesianCheckbox">Parmesian</label>
+        <input type="checkbox" id="parmesanCheckbox"> <label for="parmesanCheckbox">Parmesan</label>
         <br>
         <input type="checkbox" id="cheddarCheckbox"> <label for="cheddarCheckbox">Cheddar</label>
-        <input type="checkbox" id="mozerellaCheckbox"> <label for="mozerellaCheckbox">Mozerella</label>
+        <input type="checkbox" id="mozzarellaCheckbox"> <label for="mozzarellaCheckbox">Mozzarella</label>
         <input type="checkbox" id="peperjackcheeseCheckbox"> <label for="peperjackcheeseCheckbox">Pepper Jack</label>
 
     </label>
@@ -76,12 +76,12 @@
     <h3>Vegetables</h3>
     <label>
         <input type="checkbox" id="onionCheckbox"> <label for="onionCheckbox">Onion</label>
-        <input type="checkbox" id="PepperCheckbox">
-        <label for="PepperCheckbox">Peppers
+        <input type="checkbox" id="pepperCheckbox">
+        <label for="pepperCheckbox">Peppers
         </label>
         <input type="checkbox" id="potatoCheckbox"> <label for="potatoCheckbox">Potatoes</label>
         <br>
-        <input type="checkbox" id="asperagusCheckbox"> <label for="asperagusCheckbox">Asperagus</label>
+        <input type="checkbox" id="asparagusCheckbox"> <label for="asparagusCheckbox">Asparagus</label>
         <input type="checkbox" id="stringbeansCheckbox"> <label for="stringbeansCheckbox">String Beans</label>
         <input type="checkbox" id="broccoliCheckbox"><label for="broccoliCheckbox">Broccoli</label>
         <br>
@@ -96,7 +96,7 @@
         <br>
         <input type="checkbox" id="raspCheckbox"> <label for="raspCheckbox">Raspberries</label>
         <input type="checkbox" id="blackCheckbox"><label for="blackCheckbox">Blackberries</label>
-        <input type="checkbox" id="bannaCheckbox"> <label for="bannaCheckbox">Bananas</label>
+        <input type="checkbox" id="bananaCheckbox"> <label for="bananaCheckbox">Bananas</label>
         <br>
         <input type="checkbox" id="strawCheckbox"><label for="strawCheckbox">Strawberries</label>
     </label>
@@ -122,7 +122,7 @@
     <br>
     <br>
     <label> <button id="myButton">Submit</button> </label>
-
+    <div id="output"></div>
     <br>
     <h5>This website is not responsible for being incorrect about dietary restrictions.</h5>
 
@@ -141,7 +141,7 @@
             else {
                 var index = p.indexOf("Milk");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -158,7 +158,7 @@
             else {
                 var index = p.indexOf("Oven");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -174,7 +174,7 @@
             else {
                 var index = p.indexOf("Frying Pan");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -190,7 +190,7 @@
             else {
                 var index = p.indexOf("Pot");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -206,7 +206,7 @@
             else {
                 var index = p.indexOf("Microwave");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -226,7 +226,7 @@
             else {
                 var index = p.indexOf("Airfryer");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -251,7 +251,7 @@
             else {
                 var index = p.indexOf("Half and Half");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -268,7 +268,7 @@
             else {
                 var index = p.indexOf("Heavy Whipping Cream");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -284,7 +284,7 @@
             else {
                 var index = p.indexOf("Heavy Whipping Cream");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -292,17 +292,17 @@
 
 
 
-        var proveloneCheckbox = document.getElementById("proveloneCheckbox")
-        proveloneCheckbox.addEventListener("change", function () {
+        var provoloneCheckbox = document.getElementById("provoloneCheckbox")
+        provoloneCheckbox.addEventListener("change", function () {
             boolean = this.checked;
             console.log("Checkbox checked: " + boolean)
             if (boolean) {
-                p.push("Provelone")
+                p.push("Provolone")
             }
             else {
-                var index = p.indexOf("Provelone");
+                var index = p.indexOf("Provolone");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -318,24 +318,24 @@
             else {
                 var index = p.indexOf("Swiss");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
         });
 
 
-        var parmesianCheckbox = document.getElementById("parmesianCheckbox")
-        parmesianCheckbox.addEventListener("change", function () {
+        var parmesanCheckbox = document.getElementById("parmesanCheckbox")
+        parmesanCheckbox.addEventListener("change", function () {
             boolean = this.checked;
             console.log("Checkbox checked: " + boolean)
             if (boolean) {
-                p.push("Parmesian")
+                p.push("Parmesan")
             }
             else {
-                var index = p.indexOf("Parmesian");
+                var index = p.indexOf("Parmesan");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -354,23 +354,23 @@
             else {
                 var index = p.indexOf("Cheddar");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
         });
 
-        var mozerellaCheckbox = document.getElementById("mozerellaCheckbox")
-        mozerellaCheckbox.addEventListener("change", function () {
+        var mozzarellaCheckbox = document.getElementById("mozzarellaCheckbox")
+        mozzarellaCheckbox.addEventListener("change", function () {
             boolean = this.checked;
             console.log("Checkbox checked: " + boolean)
             if (boolean) {
-                p.push("Mozerella")
+                p.push("Mozzarella")
             }
             else {
-                var index = p.indexOf("Mozerella");
+                var index = p.indexOf("Mozzarella");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -386,7 +386,7 @@
             else {
                 var index = p.indexOf("Rice");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -402,7 +402,7 @@
             else {
                 var index = p.indexOf("Flour");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -420,7 +420,7 @@
             else {
                 var index = p.indexOf("Bread Crumbs");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -436,7 +436,7 @@
             else {
                 var index = p.indexOf("Oats");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -454,7 +454,7 @@
             else {
                 var index = p.indexOf("Pasta");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -470,7 +470,7 @@
             else {
                 var index = p.indexOf("Bread");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -488,7 +488,7 @@
             else {
                 var index = p.indexOf("Tortillas");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -504,15 +504,15 @@
             else {
                 var index = p.indexOf("Onion");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
         });
 
 
-        var bellPepperCheckbox = document.getElementById("PepperCheckbox")
-        PepperCheckbox.addEventListener("change", function () {
+        var pepperCheckbox = document.getElementById("pepperCheckbox")
+        pepperCheckbox.addEventListener("change", function () {
             boolean = this.checked;
             console.log("Checkbox checked: " + boolean)
             if (boolean) {
@@ -521,7 +521,7 @@
             else {
                 var index = p.indexOf("Peppers");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -538,7 +538,7 @@
             else {
                 var index = p.indexOf("Potatoes");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -546,17 +546,17 @@
 
 
 
-        var asperagusCheckbox = document.getElementById("asperagusCheckbox")
-        asperagusCheckbox.addEventListener("change", function () {
+        var asparagusCheckbox = document.getElementById("asparagusCheckbox")
+        asparagusCheckbox.addEventListener("change", function () {
             boolean = this.checked;
             console.log("Checkbox checked: " + boolean)
             if (boolean) {
-                p.push("Asperagus")
+                p.push("Asparagus")
             }
             else {
-                var index = p.indexOf("Asperagus");
+                var index = p.indexOf("Asparagus");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -572,7 +572,7 @@
             else {
                 var index = p.indexOf("String Beans");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -588,7 +588,7 @@
             else {
                 var index = p.indexOf("Broccoli");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -606,7 +606,7 @@
             else {
                 var index = p.indexOf("Spring Onion");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -625,7 +625,7 @@
             else {
                 var index = p.indexOf("Apple");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -641,7 +641,24 @@
             else {
                 var index = p.indexOf("Blueberries");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
+                }
+
+            }
+        });
+
+
+        var blackCheckbox = document.getElementById("blackCheckbox")
+        blackCheckbox.addEventListener("change", function () {
+            boolean = this.checked;
+            console.log("Checkbox checked: " + boolean)
+            if (boolean) {
+                p.push("Blackberries")
+            }
+            else {
+                var index = p.indexOf("Blackberries");
+                if (index !== -1) {
+                    p.splice(index, 1);
                 }
 
             }
@@ -657,7 +674,7 @@
             else {
                 var index = p.indexOf("Peaches");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -674,23 +691,23 @@
             else {
                 var index = p.indexOf("Raspberries");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
         });
 
-        var bannaCheckbox = document.getElementById("bannaCheckbox")
-        bannaCheckbox.addEventListener("change", function () {
+        var bananaCheckbox = document.getElementById("bananaCheckbox")
+        bananaCheckbox.addEventListener("change", function () {
             boolean = this.checked;
             console.log("Checkbox checked: " + boolean)
             if (boolean) {
-                p.push("Bannanas")
+                p.push("Banana")
             }
             else {
-                var index = p.indexOf("Bannanas");
+                var index = p.indexOf("Banana");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -707,7 +724,7 @@
             else {
                 var index = p.indexOf("Strawberries");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -726,7 +743,7 @@
             else {
                 var index = p.indexOf("Chicken");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -743,7 +760,7 @@
             else {
                 var index = p.indexOf("Venison");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -759,7 +776,7 @@
             else {
                 var index = p.indexOf("Beef");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -775,7 +792,7 @@
             else {
                 var index = p.indexOf("Pork");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -792,7 +809,7 @@
             else {
                 var index = p.indexOf("Shrimp");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -808,7 +825,7 @@
             else {
                 var index = p.indexOf("Egg");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -824,7 +841,7 @@
             else {
                 var index = p.indexOf("Beans");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -841,7 +858,7 @@
             else {
                 var index = p.indexOf("Nuts");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -858,7 +875,7 @@
             else {
                 var index = p.indexOf("Salmon");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -874,7 +891,7 @@
             else {
                 var index = p.indexOf("Tofu");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -890,7 +907,7 @@
             else {
                 var index = p.indexOf("Butter");
                 if (index !== -1) {
-                    array.splice(index, 1);
+                    p.splice(index, 1);
                 }
 
             }
@@ -931,17 +948,17 @@
 
 
 
-        var Chickendumplings = ["Oven", "Chicken", "Onions", "Butter", "Heavy Cream", "Flour"]
-        var ChickenParmesanMeatballs = ["Frying Pan", "Egg", "Chicken", "Parmesean", "Mozzarella"]
+        var Chickendumplings = ["Oven", "Chicken", "Onion", "Butter", "Heavy Whipping Cream", "Flour"]
+        var ChickenParmesanMeatballs = ["Frying Pan", "Egg", "Chicken", "Parmesan", "Mozzarella"]
         var OnePotGarlicParmesanPasta = ["Pot", "Milk", "Parmesan", "Butter"]
-        var TacoSoup = ["Pot", "Beef", "Beans", "Onions", "Peppers"]
-        var LasagnaSoup = ["Pot", "Mozzerlla", "Parmesan", "Pasta"]
+        var TacoSoup = ["Pot", "Beef", "Beans", "Onion", "Peppers"]
+        var LasagnaSoup = ["Pot", "Mozzarella", "Parmesan", "Pasta"]
         var StuffedPepperSoup = ["Pot", "Beef", "Peppers", "Onion", "Pepper Jack Cheese", "Rice"]
         var VenisonBourguignon = ["Pot", "Venison", "Pork", "Onion", "Butter", "Flour"]
         var FriedPorkChops = ["Frying Pan", "Pork", "Flour"]
         var PorkTenderloinwithPeaches = ["Frying Pan", "Pork", "Peaches", "Onion"]
         var GarlicButterPorkBiteswithLemonGreenBeans = ["Frying Pan", "Pork", "String Beans"]
-        var SausageandEggandwiches = ["Frying Pan", "Pork", "Egg", "Onion", "Peppers", "Chedder"]
+        var SausageandEggandwiches = ["Frying Pan", "Pork", "Egg", "Onion", "Peppers", "Cheddar"]
         var BAKEDEGGBOATS = ["Oven", "Pork", "Egg", "Heavy Whipping Cream", "Bread"]
         var EasyUltimateBreakfastFrittata = ["Oven", "Frying Pan", "Egg", "Pork", "Peppers"]
         var HOMEMADEBAKEDBEANSVEGAN = ["Pot", "Beans", "Onion"]
@@ -968,18 +985,18 @@
         var AirFryerGrilledPeaches = ["Airfryer", "Peaches", "Oats"]
         var PeachCobbler = ["Oven", "Peaches", "Milk", "Butter"]
         var ThreeBerryPie = ["Oven", "Peaches", "Blueberries", "Strawberries",]
-        var RaspberryandAlmondShortbreadThumbprints = ["Oven", "Raspberry", "Butter", "Flour"]
-        var FreshRaspberrySauce = ["Pot", "Raspberry"]
-        var BlackberryPuffPastryTurnoverRecipe = ["Oven", "Egg", "Blackberries", "Heavy Cream", "Milk"]
+        var RaspberryandAlmondShortbreadThumbprints = ["Oven", "Raspberries", "Butter", "Flour"]
+        var FreshRaspberrySauce = ["Pot", "Raspberries"]
+        var BlackberryPuffPastryTurnoverRecipe = ["Oven", "Egg", "Blackberries", "Heavy Whipping Cream", "Milk"]
         var BlackberryMuffins = ["Oven", "Blackberries", "Egg", "Butter", "Milk", "Flour"]
         var FrozenBananaTreatwithChocolate = ["Banana", "Oats"]
         var Strawberrypie = ["Oven", "Strawberries"]
         var SweetStrawberries = ["Strawberries"]
-        var Strawberryandcoconutbirchermuesli = ["Vegetarian", "Strawberries", "Oats"]
+        var Strawberryandcoconutbirchermuesli = ["Strawberries", "Oats"]
         var MARINATEDROASTEDONIONS = ["Frying Pan", "Onion", "Butter"]
-        var SAUTEEDPEPPERSANDONIONS = ["Frying Pan", "Pepper", "Onions"]
-        var PanRoastedPeppers = ["Frying Pan", "Pepper", "Onion"]
-        var StuffedPeppers = ["Oven", "Beef", "Onion", "Pepper", "Mozzerella", "Rice"]
+        var SAUTEEDPEPPERSANDONIONS = ["Frying Pan", "Peppers", "Onion"]
+        var PanRoastedPeppers = ["Frying Pan", "Peppers", "Onion"]
+        var StuffedPeppers = ["Oven", "Beef", "Onion", "Peppers", "Mozzarella", "Rice"]
         var HasselbackPotatoeswithGarlicandHerbButter = ["Oven", "Potatoes", "Butter", "Parmesan"]
         var GreekChickenFreezerMeal = ["Oven", "Chicken", "Potatoes"]
         var GarlicRoastedPotatoes = ["Oven", "Potatoes"]
@@ -989,7 +1006,7 @@
         var SautéedGreenBeanswithGarlic = ["Frying Pan", "String Beans"]
         var ButteryGarlicGreenBeans = ["Frying Pan", "String Beans", "Butter"]
         var ClassicGreenBeanCasserole = ["Frying Pan", "String Beans", "Butter", "Milk", "Flour"]
-        var CaramelizedBroccoliwithGarlic = ["Frying Pan", "Brocoli"]
+        var CaramelizedBroccoliwithGarlic = ["Frying Pan", "Broccoli"]
         var HealthyMacandCheesewithBroccoli = ["Pot", "Broccoli", "Cheddar", "Mozzarella", "Flour"]
         var GrilledSpringOnions = ["Frying Pan", "Spring Onion", "Tofu", "Rice"]
         var Teriyakitofuwithcharredspringonions = ["Frying Pan", "Tofu", "Spring Onion", "Rice"]
@@ -998,7 +1015,7 @@
         var ChickenProvolone = ["Oven", "Chicken", "Provolone"]
         var RANCHCHICKENANDSWISSSLIDERS = ["Oven", "Chicken", "Onion", "Swiss"]
         var CherryTomatoMozzarellaSaute = ["Oven", "Mozzarella",]
-        var CreamyTuscanChicken = ["Oven", "Chicken", "Onion", "Parmesan", "Heavy Cream"]
+        var CreamyTuscanChicken = ["Oven", "Chicken", "Onion", "Parmesan", "Heavy Whipping Cream"]
         var cheddarroastedtomatoes = ["Oven", "Cheddar"]
         var SeasonedRice = ["Oven", "Butter", "Rice"]
         var GreekPotatoCasserole = ["Oven", "Potato", "Butter", "Parmesan", "Bread Crumbs"]
@@ -1015,9 +1032,9 @@
 
         var test = ["oven", "Blueberries"]
 
-
+        const output = document.querySelector("#output");
         var button = document.getElementById("myButton")
-        button.addEventListener("click", function () {
+        /*button.addEventListener("click", function () {
             var bool = true;
             for (var i = 0; i < test.length; i++) {
                 bool = bool && p.includes(test[i])
@@ -1027,15 +1044,15 @@
                 //document.write (p)
             }
 
-        });
+        });*/
         button.addEventListener("click", function () {
             var bool = true;
             for (var i = 0; i < Chickendumplings.length; i++) {
                 bool = bool && p.includes(Chickendumplings[i])
             }
             if (bool) {
-                document.write(Chickendumplings + "\n")
-                document.write("https://tasty.co/recipe/cozy-chicken-and-dumplings")
+                const fout = "chickem dumplings     https://tasty.co/recipe/cozy-chicken-and-dumplings";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
 
@@ -1045,22 +1062,8 @@
                 bool = bool && p.includes(ChickenParmesanMeatballs[i])
             }
             if (bool) {
-                document.write(ChickenParmesanMeatballs + "\n")
-                document.write("https://www.allrecipes.com/recipe/8543745/chicken-parmesan-meatballs/")
-            }
-        });
-        //  button.addEventListener("click", function () {
-        //  var bool = true;
-
-        // });
-        button.addEventListener("click", function () {
-            var bool = true;
-            for (var i = 0; i < ChickenParmesanMeatballs.length; i++) {
-                bool = bool && p.includes(ChickenParmesanMeatballs[i])
-            }
-            if (bool) {
-                document.write(ChickenParmesanMeatballs + "\n")
-                document.write("https://www.allrecipes.com/recipe/8543745/chicken-parmesan-meatballs/")
+                const fout = "Chicken Parmesan Meatballs     https://www.allrecipes.com/recipe/8543745/chicken-parmesan-meatballs/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1069,8 +1072,9 @@
                 bool = bool && p.includes(OnePotGarlicParmesanPasta[i])
             }
             if (bool) {
-                document.write(OnePotGarlicParmesanPasta + "\n")
-                document.write("https://tasty.co/recipe/one-pot-garlic-parmesan-pasta")
+                const fout = "One Pot Garlic Parmesan Pasta     https://tasty.co/recipe/one-pot-garlic-parmesan-pasta";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1079,8 +1083,8 @@
                 bool = bool && p.includes(TacoSoup[i])
             }
             if (bool) {
-                document.write(TacoSoup + "\n")
-                document.write("https://themodernproper.com/taco-soup")
+                const fout = "Taco Soup     https://themodernproper.com/taco-soup";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
 
@@ -1090,8 +1094,9 @@
                 bool = bool && p.includes(LasagnaSoup[i])
             }
             if (bool) {
-                document.write(LasagnaSoup + "\n")
-                document.write("https://themodernproper.com/lasagna-soup")
+                const fout = "Lasagna Soup    https://themodernproper.com/lasagna-soup";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1100,8 +1105,8 @@
                 bool = bool && p.includes(StuffedPepperSoup[i])
             }
             if (bool) {
-                document.write(StuffedPepperSoup + "\n")
-                document.write("https://themodernproper.com/stuffed-pepper-soup")
+                const fout = "Stuffed Pepper Soup    https://themodernproper.com/stuffed-pepper-soup";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1110,8 +1115,9 @@
                 bool = bool && p.includes(VenisonBourguignon[i])
             }
             if (bool) {
-                document.write(VenisonBourguignon + "\n")
-                document.write("https://www.aspicyperspective.com/venison-bourguignon/")
+                const fout = "Venison Bourguignon   https://www.aspicyperspective.com/venison-bourguignon/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1120,8 +1126,8 @@
                 bool = bool && p.includes(FriedPorkChops[i])
             }
             if (bool) {
-                document.write(FriedPorkChops + "\n")
-                document.write("https://spaceshipsandlaserbeams.com/fried-pork-chops/")
+                const fout = "Fried Pork Chops   https://spaceshipsandlaserbeams.com/fried-pork-chops/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1130,8 +1136,9 @@
                 bool = bool && p.includes(GarlicButterPorkBiteswithLemonGreenBeans[i])
             }
             if (bool) {
-                document.write(GarlicButterPorkBiteswithLemonGreenBeans + "\n")
-                document.write("https://www.eatwell101.com/garlic-butter-pork-bites-recipe")
+                const fout = "Garlic Butter Pork Bites with Lemon Green Beans  https://www.eatwell101.com/garlic-butter-pork-bites-recipe";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1140,8 +1147,9 @@
                 bool = bool && p.includes(PorkTenderloinwithPeaches[i])
             }
             if (bool) {
-                document.write(PorkTenderloinwithPeaches + "\n")
-                document.write("https://www.allrecipes.com/recipe/8420615/pork-tenderloin-with-peaches/")
+                const fout = "Pork Tenderloin with Peaches  https://www.allrecipes.com/recipe/8420615/pork-tenderloin-with-peaches/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
 
@@ -1151,8 +1159,8 @@
                 bool = bool && p.includes(SausageandEggandwiches[i])
             }
             if (bool) {
-                document.write(SausageandEggandwiches + "\n")
-                document.write("https://www.goodhousekeeping.com/food-recipes/easy/a39412499/sausage-and-egg-sandwiches-recipe/")
+                const fout = "Sausage and Egg and wiches  https://www.goodhousekeeping.com/food-recipes/easy/a39412499/sausage-and-egg-sandwiches-recipe/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1161,8 +1169,8 @@
                 bool = bool && p.includes(BAKEDEGGBOATS[i])
             }
             if (bool) {
-                document.write(BAKEDEGGBOATS + "\n")
-                document.write("https://www.spoonforkbacon.com/baked-egg-boats/")
+                const fout = "BAKED EGG BOATS https://www.spoonforkbacon.com/baked-egg-boats/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1171,8 +1179,9 @@
                 bool = bool && p.includes(EasyUltimateBreakfastFrittata[i])
             }
             if (bool) {
-                document.write(EasyUltimateBreakfastFrittata + "\n")
-                document.write("https://houseofnasheats.com/easy-ultimate-breakfast-frittata/")
+                const fout = "Easy Ultimate Breakfast Frittata  https://houseofnasheats.com/easy-ultimate-breakfast-frittata/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
 
@@ -1182,8 +1191,9 @@
                 bool = bool && p.includes(HOMEMADEBAKEDBEANSVEGAN[i])
             }
             if (bool) {
-                document.write(HOMEMADEBAKEDBEANSVEGAN + "\n")
-                document.write("https://supperinthesuburbs.com/2021/01/10/homemade-baked-beans-vegan/")
+                const fout = "HOMEMADE BAKED BEANS VEGAN    https://supperinthesuburbs.com/2021/01/10/homemade-baked-beans-vegan/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1192,8 +1202,9 @@
                 bool = bool && p.includes(EasyVegetarianChili[i])
             }
             if (bool) {
-                document.write(EasyVegetarianChili + "\n")
-                document.write("https://www.loveandlemons.com/vegetarian-chili-recipe/")
+                const fout = "Easy Vegetarian Chili    https://www.loveandlemons.com/vegetarian-chili-recipe/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1202,8 +1213,9 @@
                 bool = bool && p.includes(EasyCandiedAlmonds[i])
             }
             if (bool) {
-                document.write(EasyCandiedAlmonds + "\n")
-                document.write("https://www.savorynothings.com/sugar-glazed-almonds/")
+                const fout = "Easy Candied Almonds    https://www.savorynothings.com/sugar-glazed-almonds/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1212,8 +1224,9 @@
                 bool = bool && p.includes(HomemadeSpicyNutsin20Minutes[i])
             }
             if (bool) {
-                document.write(HomemadeSpicyNutsin20Minutes + "\n")
-                document.write("https://realsimplegood.com/spicy-nuts/")
+                const fout = "Homemade Spicy Nuts in 20 Minutes    https://realsimplegood.com/spicy-nuts/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
 
@@ -1223,8 +1236,9 @@
                 bool = bool && p.includes(SweetSaltySpicyPartyNuts[i])
             }
             if (bool) {
-                document.write(SweetSaltySpicyPartyNuts + "\n")
-                document.write("https://www.allrecipes.com/recipe/230159/sweet-salty-spicy-party-nuts/")
+                const fout = "Sweet Salty Spicy Party Nuts    https://www.allrecipes.com/recipe/230159/sweet-salty-spicy-party-nuts/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1233,8 +1247,8 @@
                 bool = bool && p.includes(pestosalmon[i])
             }
             if (bool) {
-                document.write(pestosalmon + "\n")
-                document.write("https://www.acouplecooks.com/pesto-salmon/")
+                const fout = "pesto salmon   https://www.acouplecooks.com/pesto-salmon/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1243,8 +1257,9 @@
                 bool = bool && p.includes(HoneyGarlicGlazedSalmon[i])
             }
             if (bool) {
-                document.write(HoneyGarlicGlazedSalmon + "\n")
-                document.write("https://www.thechunkychef.com/honey-garlic-glazed-salmon/")
+                const fout = "Honey Garlic Glazed Salmon  https://www.thechunkychef.com/honey-garlic-glazed-salmon/";
+                output.innerHTML += `<p>${fout}</p>`;
+
             }
         });
         button.addEventListener("click", function () {
@@ -1253,8 +1268,9 @@
                 bool = bool && p.includes(GarlicButterBakedSalmonRecipe[i])
             }
             if (bool) {
-                document.write(GarlicButterBakedSalmonRecipe + "\n")
-                document.write("https://www.primaverakitchen.com/garlic-butter-salmon-in-foil-recipe/")
+                const fout = "GarlicButterBakedSalmonRecipe  https://www.primaverakitchen.com/garlic-butter-salmon-in-foil-recipe/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
 
@@ -1264,8 +1280,8 @@
                 bool = bool && p.includes(BangBangShrimp[i])
             }
             if (bool) {
-                document.write(BangBangShrimp + "\n")
-                document.write("https://insanelygoodrecipes.com/bang-bang-shrimp/")
+                const fout = "BangBangShrimp  https://insanelygoodrecipes.com/bang-bang-shrimp/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1274,8 +1290,9 @@
                 bool = bool && p.includes(QuickHealthyDinner20MinuteHoneyGarlicShrimp[i])
             }
             if (bool) {
-                document.write(QuickHealthyDinner20MinuteHoneyGarlicShrimp + "\n")
-                document.write("https://sallysbakingaddiction.com/quick-healthy-dinner-20-minute-honey-garlic-shrimp/")
+                const fout = "Quick Healthy Dinner 20 Minute Honey Garlic Shrimp  https://sallysbakingaddiction.com/quick-healthy-dinner-20-minute-honey-garlic-shrimp/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1284,8 +1301,9 @@
                 bool = bool && p.includes(creamygarlicshrimpwithparmesan[i])
             }
             if (bool) {
-                document.write(creamygarlicshrimpwithparmesan + "\n")
-                document.write("https://cafedelites.com/creamy-garlic-shrimp/")
+                const fout = "creamy garlic shrimp with parmesan  https://cafedelites.com/creamy-garlic-shrimp/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1294,8 +1312,9 @@
                 bool = bool && p.includes(VeganBuffaloTofuWings[i])
             }
             if (bool) {
-                document.write(VeganBuffaloTofuWings + "\n")
-                document.write("https://shaneandsimple.com/vegan-buffalo-tofu-wings/")
+                const fout = "Vegan Buffalo Tofu Wings https://shaneandsimple.com/vegan-buffalo-tofu-wings/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1304,8 +1323,9 @@
                 bool = bool && p.includes(PerfectPanFriedTofu[i])
             }
             if (bool) {
-                document.write(PerfectPanFriedTofu + "\n")
-                document.write("https://www.acouplecooks.com/pan-fried-tofu/")
+                const fout = "Perfect Pan Fried Tofu https://www.acouplecooks.com/pan-fried-tofu/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1314,8 +1334,8 @@
                 bool = bool && p.includes(EasyBakedTofu[i])
             }
             if (bool) {
-                document.write(EasyBakedTofu + "\n")
-                document.write("https://www.acouplecooks.com/baked-tofu/")
+                const fout = "Easy Baked Tofu https://www.acouplecooks.com/baked-tofu/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1324,8 +1344,8 @@
                 bool = bool && p.includes(SautéedAppleOnionandFennel[i])
             }
             if (bool) {
-                document.write(SautéedAppleOnionandFennel + "\n")
-                document.write("https://www.allrecipes.com/recipe/8509659/sauteed-apple-onion-and-fennel/")
+                const fout = "Sautéed Apple Onion and Fennel https://www.allrecipes.com/recipe/8509659/sauteed-apple-onion-and-fennel/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1334,8 +1354,8 @@
                 bool = bool && p.includes(OldFashionedEasyAppleCrisp[i])
             }
             if (bool) {
-                document.write(OldFashionedEasyAppleCrisp + "\n")
-                document.write("https://www.thechunkychef.com/old-fashioned-easy-apple-crisp/")
+                const fout = "Old Fashioned Easy Apple Crisp https://www.thechunkychef.com/old-fashioned-easy-apple-crisp/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1344,8 +1364,8 @@
                 bool = bool && p.includes(FrenchAppleCake[i])
             }
             if (bool) {
-                document.write(FrenchAppleCake + "\n")
-                document.write("https://www.onceuponachef.com/recipes/french-apple-cake.html")
+                const fout = "French Apple Cake https://www.onceuponachef.com/recipes/french-apple-cake.html";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1354,8 +1374,8 @@
                 bool = bool && p.includes(BLUEBERRYPIEBARS[i])
             }
             if (bool) {
-                document.write(BLUEBERRYPIEBARS + "\n")
-                document.write("https://www.averiecooks.com/blueberry-pie-bars/")
+                const fout = "BLUEBERRY PIE BARS https://www.averiecooks.com/blueberry-pie-bars/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1364,8 +1384,8 @@
                 bool = bool && p.includes(QuickandEasyBlueberryMuffins[i])
             }
             if (bool) {
-                document.write(QuickandEasyBlueberryMuffins + "\n")
-                document.write("https://www.inspiredtaste.net/18982/our-favorite-easy-blueberry-muffin-recipe/")
+                const fout = "Quick and Easy Blueberry Muffins https://www.inspiredtaste.net/18982/our-favorite-easy-blueberry-muffin-recipe/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1374,8 +1394,9 @@
                 bool = bool && p.includes(BlueberryBreakfastCake[i])
             }
             if (bool) {
-                document.write(BlueberryBreakfastCake + "\n")
-                document.write("https://amandascookin.com/blueberry-breakfast-cake/")
+                const fout = "Blueberry Breakfast Cake https://amandascookin.com/blueberry-breakfast-cake/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1384,19 +1405,18 @@
                 bool = bool && p.includes(PeachBourbonBBQSauce[i])
             }
             if (bool) {
-                document.write(PeachBourbonBBQSauce + "\n")
-                document.write("https://www.allrecipes.com/recipe/8500498/peach-bourbon-bbq-sauce/s")
+                const fout = "Peach Bourbon BBQ Sauce https://www.allrecipes.com/recipe/8500498/peach-bourbon-bbq-sauce/s";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
-        var button = document.getElementById("myButton")
         button.addEventListener("click", function () {
             var bool = true;
             for (var i = 0; i < AirFryerGrilledPeaches.length; i++) {
                 bool = bool && p.includes(AirFryerGrilledPeaches[i])
             }
             if (bool) {
-                document.write(AirFryerGrilledPeaches + "\n")
-                document.write("https://www.allrecipes.com/recipe/8468500/air-fryer-grilled-peaches/")
+                const fout = "AirFryer Grilled Peaches https://www.allrecipes.com/recipe/8468500/air-fryer-grilled-peaches/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1405,8 +1425,8 @@
                 bool = bool && p.includes(PeachCobbler[i])
             }
             if (bool) {
-                document.write(PeachCobbler + "\n")
-                document.write("https://tastesbetterfromscratch.com/peach-cobbler/")
+                const fout = "Peach Cobbler https://tastesbetterfromscratch.com/peach-cobbler/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
 
@@ -1416,8 +1436,9 @@
                 bool = bool && p.includes(PeachCobbler[i])
             }
             if (bool) {
-                document.write(ThreeBerryPie + "\n")
-                document.write("https://www.allrecipes.com/recipe/12384/three-berry-pie/")
+                const fout = "Three Berry Pie https://www.allrecipes.com/recipe/12384/three-berry-pie/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1426,8 +1447,9 @@
                 bool = bool && p.includes(RaspberryandAlmondShortbreadThumbprints[i])
             }
             if (bool) {
-                document.write(RaspberryandAlmondShortbreadThumbprints + "\n")
-                document.write("https://www.allrecipes.com/recipe/10222/raspberry-and-almond-shortbread-thumbprints/")
+                const fout = "Raspberry and Almond Short bread Thumbprints   https://www.allrecipes.com/recipe/10222/raspberry-and-almond-shortbread-thumbprints/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1436,8 +1458,8 @@
                 bool = bool && p.includes(FreshRaspberrySauce[i])
             }
             if (bool) {
-                document.write(FreshRaspberrySauce + "\n")
-                document.write("https://www.allrecipes.com/recipe/241308/fresh-raspberry-sauce/")
+                const fout = "Fresh Raspberry Sauce     https://www.allrecipes.com/recipe/241308/fresh-raspberry-sauce/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1446,8 +1468,9 @@
                 bool = bool && p.includes(BlackberryPuffPastryTurnoverRecipe[i])
             }
             if (bool) {
-                document.write(BlackberryPuffPastryTurnoverRecipe + "\n")
-                document.write("https://www.driscolls.com/recipes/easy-blackberry-turnovers-recipe")
+                const fout = "Blackberry Puff Pastry Turnover Recipe    https://www.driscolls.com/recipes/easy-blackberry-turnovers-recipe";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1456,8 +1479,9 @@
                 bool = bool && p.includes(BlackberryMuffins[i])
             }
             if (bool) {
-                document.write(BlackberryMuffins + "\n")
-                document.write("https://www.simplyrecipes.com/recipes/blackberry_muffins/")
+                const fout = "Blackberry Muffins    https://www.simplyrecipes.com/recipes/blackberry_muffins/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1466,8 +1490,8 @@
                 bool = bool && p.includes(FrozenBananaTreatwithChocolate[i])
             }
             if (bool) {
-                document.write(FrozenBananaTreatwithChocolate + "\n")
-                document.write("https://www.forksoverknives.com/recipes/vegan-desserts/frozen-chocolate-banana-treats-ice-cream/")
+                const fout = "Frozen Banana Treat with Chocolate    https://www.forksoverknives.com/recipes/vegan-desserts/frozen-chocolate-banana-treats-ice-cream/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1476,8 +1500,8 @@
                 bool = bool && p.includes(Strawberrypie[i])
             }
             if (bool) {
-                document.write(Strawberrypie + "\n")
-                document.write("https://www.thepioneerwoman.com/food-cooking/recipes/a35917337/easy-strawberry-pie/")
+                const fout = "Strawberry pie   https://www.thepioneerwoman.com/food-cooking/recipes/a35917337/easy-strawberry-pie/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
 
@@ -1488,8 +1512,9 @@
                 bool = bool && p.includes(SweetStrawberries[i])
             }
             if (bool) {
-                document.write(SweetStrawberries + "\n")
-                document.write("https://www.thepioneerwoman.com/food-cooking/recipes/a32336546/sweet-strawberries-recipe/")
+                const fout = "Sweet Strawberries   https://www.thepioneerwoman.com/food-cooking/recipes/a32336546/sweet-strawberries-recipe/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1498,8 +1523,9 @@
                 bool = bool && p.includes(Strawberryandcoconutbirchermuesli[i])
             }
             if (bool) {
-                document.write(Strawberryandcoconutbirchermuesli + "\n")
-                document.write("https://www.taste.com.au/recipes/strawberry-coconut-bircher-muesli/ka56byu6?r=recipes/9xs1wzhc")
+                const fout = "Strawberry and coconut birchermuesli   https://www.taste.com.au/recipes/strawberry-coconut-bircher-muesli/ka56byu6?r=recipes/9xs1wzhc";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1508,8 +1534,9 @@
                 bool = bool && p.includes(MARINATEDROASTEDONIONS[i])
             }
             if (bool) {
-                document.write(MARINATEDROASTEDONIONS + "\n")
-                document.write("https://keviniscooking.com/roasted-onions/")
+                const fout = "MARINATED ROASTED ONIONS   https://keviniscooking.com/roasted-onions/";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1518,8 +1545,8 @@
                 bool = bool && p.includes(SAUTEEDPEPPERSANDONIONS[i])
             }
             if (bool) {
-                document.write(SAUTEEDPEPPERSANDONIONS + "\n")
-                document.write("https://www.isabeleats.com/sauteed-peppers-and-onions/")
+                const fout = "SAUTEED PEPPERS AND ONIONS   https://www.isabeleats.com/sauteed-peppers-and-onions/";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
         button.addEventListener("click", function () {
@@ -1528,8 +1555,9 @@
                 bool = bool && p.includes(PanRoastedPeppers[i])
             }
             if (bool) {
-                document.write(PanRoastedPeppers + "\n")
-                document.write("https://www.thespruceeats.com/pan-roasted-peppers-482763")
+                const fout = "Pan Roasted Peppers  https://www.thespruceeats.com/pan-roasted-peppers-482763";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1538,8 +1566,9 @@
                 bool = bool && p.includes(StuffedPeppers[i])
             }
             if (bool) {
-                document.write(StuffedPeppers + "\n")
-                document.write("https://www.bettycrocker.com/recipes/stuffed-peppers/63e29e18-903e-467c-aec5-fba4ce3a138f")
+                const fout = "Stuffed Peppers  https://www.bettycrocker.com/recipes/stuffed-peppers/63e29e18-903e-467c-aec5-fba4ce3a138f";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1548,8 +1577,9 @@
                 bool = bool && p.includes(HasselbackPotatoeswithGarlicandHerbButter[i])
             }
             if (bool) {
-                document.write(HasselbackPotatoeswithGarlicandHerbButter + "\n")
-                document.write("https://themodernproper.com/hasselback-potatoes-with-garlic-and-herb-butter")
+                const fout = "Hassel back Potatoes with Garlic and Herb Butter  https://themodernproper.com/hasselback-potatoes-with-garlic-and-herb-butter";
+                output.innerHTML += `<p>${fout}</p>`
+
             }
         });
         button.addEventListener("click", function () {
@@ -1558,8 +1588,8 @@
                 bool = bool && p.includes(GreekChickenFreezerMeal[i])
             }
             if (bool) {
-                document.write(GreekChickenFreezerMeal + "\n")
-                document.write("https://themodernproper.com/greek-chicken-freezer-meal")
+                const fout = "Greek Chicken Freezer Meal  https://themodernproper.com/greek-chicken-freezer-meal";
+                output.innerHTML += `<p>${fout}</p>`
             }
         });
 
@@ -1570,8 +1600,8 @@
                 bool = bool && p.includes(GarlicRoastedPotatoes[i])
             }
             if (bool) {
-                document.write(GarlicRoastedPotatoes + "\n")
-                document.write("https://www.foodnetwork.com/recipes/ina-garten/garlic-roasted-potatoes-recipe-1913067")
+                const fout = "Garlic Roasted Potatoes    https://www.foodnetwork.com/recipes/ina-garten/garlic-roasted-potatoes-recipe-1913067";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         var button = document.getElementById("myButton")
@@ -1581,8 +1611,8 @@
                 bool = bool && p.includes(OvenRoastedAsparagus[i])
             }
             if (bool) {
-                document.write(OvenRoastedAsparagus + "\n")
-                document.write("https://www.allrecipes.com/recipe/214931/oven-roasted-asparagus/")
+                const fout = "Oven Roasted Asparagus    https://www.allrecipes.com/recipe/214931/oven-roasted-asparagus/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1591,8 +1621,8 @@
                 bool = bool && p.includes(SautéedAsparagus[i])
             }
             if (bool) {
-                document.write(SautéedAsparagus + "\n")
-                document.write("https://www.thepioneerwoman.com/food-cooking/recipes/a38985039/sauteed-asparagus-recipe/")
+                const fout = "Sautéed Asparagus    https://www.thepioneerwoman.com/food-cooking/recipes/a38985039/sauteed-asparagus-recipe/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1601,8 +1631,8 @@
                 bool = bool && p.includes(cheesygarlicroastedasparagus[i])
             }
             if (bool) {
-                document.write(cheesygarlicroastedasparagus + "\n")
-                document.write("https://cafedelites.com/cheesy-garlic-roasted-asparagus/")
+                const fout = "Cheesy Garlic Roasted Asparagus    https://cafedelites.com/cheesy-garlic-roasted-asparagus/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1611,8 +1641,8 @@
                 bool = bool && p.includes(SautéedGreenBeanswithGarlic[i])
             }
             if (bool) {
-                document.write(SautéedGreenBeanswithGarlic + "\n")
-                document.write("https://www.recipetineats.com/garlic-sauteed-green-beans/")
+                const fout = "Sautéed Green Beans with Garlic    https://www.recipetineats.com/garlic-sauteed-green-beans/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1621,8 +1651,8 @@
                 bool = bool && p.includes(ButteryGarlicGreenBeans[i])
             }
             if (bool) {
-                document.write(ButteryGarlicGreenBeans + "\n")
-                document.write("https://www.allrecipes.com/recipe/230103/buttery-garlic-green-beans/")
+                const fout = "Buttery Garlic Green Beans    https://www.allrecipes.com/recipe/230103/buttery-garlic-green-beans/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1631,8 +1661,8 @@
                 bool = bool && p.includes(ClassicGreenBeanCasserole[i])
             }
             if (bool) {
-                document.write(ClassicGreenBeanCasserole + "\n")
-                document.write("https://www.delish.com/holiday-recipes/thanksgiving/a55340/easy-homemade-classic-green-bean-casserole-recipe/")
+                const fout = "Classic Green Bean Casserole    https://www.delish.com/holiday-recipes/thanksgiving/a55340/easy-homemade-classic-green-bean-casserole-recipe/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1641,8 +1671,8 @@
                 bool = bool && p.includes(CaramelizedBroccoliwithGarlic[i])
             }
             if (bool) {
-                document.write(CaramelizedBroccoliwithGarlic + "\n")
-                document.write("https://www.foodandwine.com/recipes/caramelized-broccoli-garlic")
+                const fout = "Caramelized Broccoli with Garlic    https://www.foodandwine.com/recipes/caramelized-broccoli-garlic";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
 
@@ -1652,8 +1682,8 @@
                 bool = bool && p.includes(HealthyMacandCheesewithBroccoli[i])
             }
             if (bool) {
-                document.write(HealthyMacandCheesewithBroccoli + "\n")
-                document.write("https://www.acouplecooks.com/healthy-mac-and-cheese-broccoli/")
+                const fout = "Healthy Mac and Cheese with Broccoli    https://www.acouplecooks.com/healthy-mac-and-cheese-broccoli/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1662,8 +1692,8 @@
                 bool = bool && p.includes(GrilledSpringOnions[i])
             }
             if (bool) {
-                document.write(GrilledSpringOnions + "\n")
-                document.write("https://www.thespruceeats.com/how-to-grill-spring-onions-4120094")
+                const fout = "Grilled Spring Onions     https://www.thespruceeats.com/how-to-grill-spring-onions-4120094";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         var button = document.getElementById("myButton")
@@ -1673,8 +1703,8 @@
                 bool = bool && p.includes(Teriyakitofuwithcharredspringonions[i])
             }
             if (bool) {
-                document.write(Teriyakitofuwithcharredspringonions + "\n")
-                document.write("https://www.bbcgoodfood.com/recipes/charred-spring-onions-teriyaki-tofu")
+                const fout = "Teriyaki tofu with charred spring onions     https://www.bbcgoodfood.com/recipes/charred-spring-onions-teriyaki-tofu";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1683,8 +1713,8 @@
                 bool = bool && p.includes(BreadPuddingPie[i])
             }
             if (bool) {
-                document.write(BreadPuddingPie + "\n")
-                document.write("https://www.tasteofhome.com/recipes/bread-pudding-pie/")
+                const fout = "Bread Pudding Pie     https://www.tasteofhome.com/recipes/bread-pudding-pie/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1693,8 +1723,8 @@
                 bool = bool && p.includes(HotMilkCake[i])
             }
             if (bool) {
-                document.write(HotMilkCake + "\n")
-                document.write("https://www.tasteofhome.com/recipes/hot-milk-cake/")
+                const fout = "Hot Milk Cake     https://www.tasteofhome.com/recipes/hot-milk-cake/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1703,8 +1733,8 @@
                 bool = bool && p.includes(ChickenProvolone[i])
             }
             if (bool) {
-                document.write(ChickenProvolone + "\n")
-                document.write("https://www.tasteofhome.com/recipes/chicken-provolone/")
+                const fout = "Chicken Provolone     https://www.tasteofhome.com/recipes/chicken-provolone/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1713,8 +1743,8 @@
                 bool = bool && p.includes(RANCHCHICKENANDSWISSSLIDERS[i])
             }
             if (bool) {
-                document.write(RANCHCHICKENANDSWISSSLIDERS + "\n")
-                document.write("https://www.averiecooks.com/ranch-chicken-swiss-sliders/")
+                const fout = "Ranch Chicken and Swiss Sliders     https://www.averiecooks.com/ranch-chicken-swiss-sliders/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1723,8 +1753,8 @@
                 bool = bool && p.includes(CherryTomatoMozzarellaSaute[i])
             }
             if (bool) {
-                document.write(CherryTomatoMozzarellaSaute + "\n")
-                document.write("https://www.tasteofhome.com/recipes/cherry-tomato-mozzarella-saute/")
+                const fout = "Cherry Tomato Mozzarella Saute      https://www.tasteofhome.com/recipes/cherry-tomato-mozzarella-saute/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1733,8 +1763,8 @@
                 bool = bool && p.includes(CreamyTuscanChicken[i])
             }
             if (bool) {
-                document.write(CreamyTuscanChicken + "\n")
-                document.write("https://tasty.co/recipe/creamy-tuscan-chicken")
+                const fout = "Creamy Tuscan Chicken      https://tasty.co/recipe/creamy-tuscan-chicken";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1743,8 +1773,8 @@
                 bool = bool && p.includes(cheddarroastedtomatoes[i])
             }
             if (bool) {
-                document.write(cheddarroastedtomatoes + "\n")
-                document.write("https://www.healthyseasonalrecipes.com/cheddar-roasted-tomatoes/")
+                const fout = "Cheddar Roasted Tomatoes      https://www.healthyseasonalrecipes.com/cheddar-roasted-tomatoes/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1753,8 +1783,8 @@
                 bool = bool && p.includes(SeasonedRice[i])
             }
             if (bool) {
-                document.write(SeasonedRice + "\n")
-                document.write("https://www.africanbites.com/seasoned-rice/")
+                const fout = "Seasoned Rice      https://www.africanbites.com/seasoned-rice/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1763,8 +1793,8 @@
                 bool = bool && p.includes(GreekPotatoCasserole[i])
             }
             if (bool) {
-                document.write(GreekPotatoCasserole + "\n")
-                document.write("https://www.tasteofhome.com/recipes/greek-potato-casserole/")
+                const fout = "Greek Potato Casserole      https://www.tasteofhome.com/recipes/greek-potato-casserole/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
 
@@ -1775,8 +1805,8 @@
                 bool = bool && p.includes(BestEverMacCheese[i])
             }
             if (bool) {
-                document.write(BestEverMacCheese + "\n")
-                document.write("https://www.tasteofhome.com/recipes/best-ever-mac-cheese/")
+                const fout = "Best Ever Mac and Cheese      https://www.tasteofhome.com/recipes/best-ever-mac-cheese/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1785,8 +1815,8 @@
                 bool = bool && p.includes(OatsUpma[i])
             }
             if (bool) {
-                document.write(OatsUpma + "\n")
-                document.write("hhttps://www.vegrecipesofindia.com/oats-upma-recipe/")
+                const fout = "Oats Upma     hhttps://www.vegrecipesofindia.com/oats-upma-recipe/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1795,8 +1825,8 @@
                 bool = bool && p.includes(SpaghettiCarbonara[i])
             }
             if (bool) {
-                document.write(SpaghettiCarbonara + "\n")
-                document.write("https://www.aheadofthyme.com/spaghetti-carbonara/")
+                const fout = "Spaghetti Carbonara       https://www.aheadofthyme.com/spaghetti-carbonara/";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
         button.addEventListener("click", function () {
@@ -1805,8 +1835,9 @@
                 bool = bool && p.includes(TortillaChips[i])
             }
             if (bool) {
-                document.write(TortillaChips + "\n")
-                document.write("https://www.foodnetwork.com/recipes/food-network-kitchen/tortilla-chips-recipe-3361498")
+
+                const fout = "Tortilla Chips        https://www.foodnetwork.com/recipes/food-network-kitchen/tortilla-chips-recipe-3361498";
+                output.innerHTML += `<p>${fout}</p>`;
             }
         });
 
