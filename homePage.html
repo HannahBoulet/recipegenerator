@@ -613,21 +613,6 @@
         });
 
 
-        var calliflourCheckbox = document.getElementById("calliflourCheckbox")
-        calliflourCheckbox.addEventListener("change", function () {
-            boolean = this.checked;
-            console.log("Checkbox checked: " + boolean)
-            if (boolean) {
-                p.push("Calliflour")
-            }
-            else {
-                var index = p.indexOf("Calliflour");
-                if (index !== -1) {
-                    array.splice(index, 1);
-                }
-
-            }
-        });
 
 
         var appleCheckbox = document.getElementById("appleCheckbox")
@@ -945,7 +930,8 @@
 
 
 
-        var Chickendumplings = ["oven", "chicken", "Onions", "Butter", "Heavy Cream", "Flour"]
+
+        var Chickendumplings = ["oven", "Chicken", "Onions", "Butter", "Heavy Cream", "Flour"]
         var ChickenParmesanMeatballs = ["Frying Pan", "Egg", "Chicken", "Parmesean", "Mozzarella"]
         var OnePotGarlicParmesanPasta = ["Pot", "Milk", "Parmesan", "Butter"]
         var TacoSoup = ["Pot", "Beef", "Beans", "Onions", "Peppers"]
@@ -1030,7 +1016,6 @@
         var test = ["oven", "Blueberries"]
 
 
-
         var button = document.getElementById("myButton")
         button.addEventListener("click", function () {
             var bool = true;
@@ -1039,8 +1024,9 @@
             }
             if (bool) {
                 document.write(test + "\n")
-                document.write("https://www.foodnetwork.com/recipes/food-network-kitchen/tortilla-chips-recipe-3361498")
+                //document.write (p)
             }
+
         });
         button.addEventListener("click", function () {
             var bool = true;
@@ -1053,6 +1039,20 @@
             }
         });
 
+        button.addEventListener("click", function () {
+            var bool = true;
+            for (var i = 0; i < ChickenParmesanMeatballs.length; i++) {
+                bool = bool && p.includes(ChickenParmesanMeatballs[i])
+            }
+            if (bool) {
+                document.write(ChickenParmesanMeatballs + "\n")
+                document.write("https://www.allrecipes.com/recipe/8543745/chicken-parmesan-meatballs/")
+            }
+        });
+        //  button.addEventListener("click", function () {
+        //  var bool = true;
+
+        // });
         button.addEventListener("click", function () {
             var bool = true;
             for (var i = 0; i < ChickenParmesanMeatballs.length; i++) {
@@ -1809,6 +1809,9 @@
                 document.write("https://www.foodnetwork.com/recipes/food-network-kitchen/tortilla-chips-recipe-3361498")
             }
         });
+
+
+
 
 
 
